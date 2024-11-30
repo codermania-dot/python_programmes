@@ -1,0 +1,16 @@
+def conversion(decimal):
+    binary = ''
+
+    if decimal == 0:
+        return '0'
+
+    while decimal>0:
+        rem = decimal%2
+        binary+= str(rem)
+        decimal= decimal//2
+
+    return binary
+
+decimal = int(input('enter decimal-system no:'))
+binary_rep = conversion(decimal)
+print(binary_rep[::-1])
