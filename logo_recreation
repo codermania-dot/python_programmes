@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+
+colors = ['blue', 'red', 'yellow', 'blue', 'green', 'red','k']
+letters = ['G', 'o', 'o', 'g', 'l', 'e',':)']
+positions = [0, 1, 2, 3, 4, 5, 6] 
+
+plt.figure(figsize=(8, 3))
+for pos, color, letter in zip(positions, colors, letters):
+    
+    circle = plt.Circle((pos, 0), 0.5, color=color, alpha=0.8)
+    plt.gca().add_artist(circle)
+    
+   
+    plt.text(pos, 0, letter, fontsize=28, fontweight='bold', color='white', ha='center', va='center')
+
+
+plt.xlim(-1, 7)
+plt.ylim(-1, 1.5)
+plt.axis('off') 
+plt.title('Google Logo Recreation', fontsize=16, fontweight='bold', pad=20)
+
+plt.show()
